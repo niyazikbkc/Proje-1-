@@ -1,4 +1,106 @@
-print("merhaba")
-print("niyazi")
-print("slm")
-print("as")
+
+import hesapmakinesi
+import oyunlar
+import cizimler
+import not_hesabi
+import boy_kilo_endeksi
+
+def main():
+    print("""╔════════════════════╗ 
+║       KONSOL       ║
+║                    ║ 
+║ 1. Hesap Makinesi  ║
+║ 2. Oyunlar         ║
+║ 3. Çizimler        ║
+║ 4. Not Hesabı      ║
+║ 5. Boy Kilo Endeksi║
+║ Seçiminizi Yapınız ║
+╚════════════════════╝
+""")
+    while True:
+        secim = input("Seçiminizi Yapın (Çıkış için 'q' ya basalım): ")
+        if secim == 'q':
+            print("Çıkılıyor...")
+            break
+
+        if secim == "1":
+            hesap_makinesi.hesap_makinesi()
+
+        elif secim == "2":
+            print("Oyunları Seçtiniz")
+            print("""╔════════════════════╗ 
+║ Oyun Listesi       ║
+║                    ║ 
+║ 1. Mayın Tarlası   ║
+║ 2. Taş Kağıt Makas ║
+║ 3. Adam Asmaca     ║
+╚════════════════════╝
+""")
+            while True:
+                islem = input("Oyun Seçiniz (Çıkış için 'q' ya basalım): ")
+                if islem == 'q':
+                    print("Çıkılıyor...")
+                    break
+                elif islem == "1":
+                    oyunlar.minesweeper()
+                elif islem == "2":
+                    oyunlar.rock_paper_scissors()
+                elif islem == "3":
+                    oyunlar.hangman()
+                else:
+                    print("Geçersiz Seçenek...")
+
+        elif secim == "3":
+            print("Çizimleri Seçtiniz")
+            print("""╔════════════════════╗ 
+║ Çizim Listesi      ║
+║                    ║ 
+║ 1. Kare Çiz        ║
+║ 2. Üçgen Çiz       ║
+║ 3. Çember Çiz      ║
+╚════════════════════╝
+""")
+            while True:
+                islem = input("Çizim Seçiniz (Çıkış için 'q' ya basalım): ")
+                if islem == 'q':
+                    print("Çıkılıyor...")
+                    break
+                elif islem == "1":
+                    cizimler.draw_square()
+                elif islem == "2":
+                    cizimler.draw_triangle()
+                elif islem == "3":
+                    cizimler.draw_circle()
+                else:
+                    print("Geçersiz Seçenek...")
+
+        elif secim == "4":
+            print("Not Hesabını Seçtiniz")
+            print("""╔════════════════════╗ 
+║ Not Hesap Listesi  ║
+║                    ║ 
+║ 1. Ortalama Hesapla║
+║ 2. Harf Notu Çevir  ║
+╚════════════════════╝
+""")
+            while True:
+                islem = input("Not Hesap Seçiniz (Çıkış için 'q' ya basalım): ")
+                if islem == 'q':
+                    print("Çıkılıyor...")
+                    break
+                elif islem == "1":
+                    not_hesabi.calculate_average()
+                elif islem == "2":
+                    not_hesabi.convert_grade()
+                else:
+                    print("Geçersiz Seçenek...")
+
+        elif secim == "5":
+            print("Boy Kilo Endeksi Seçtiniz")
+            boy_kilo_endeksi.calculate_bmi()
+
+        else:
+            print("Geçersiz Seçenek...")
+
+if __name__ == "__main__":
+    main()
