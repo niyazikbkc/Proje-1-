@@ -34,7 +34,7 @@ def main():
 ║ 1. Mayın Tarlası   ║
 ║ 2. Taş Kağıt Makas ║
 ║ 3. Adam Asmaca     ║
-╚════════════════════╝
+╚════════════════════ ╝
 """)
             while True:
                 islem = input("Oyun Seçiniz (Çıkış için 'q' ya basalım): ")
